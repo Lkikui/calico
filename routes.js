@@ -1,4 +1,5 @@
 export default app => {
+  // fetch all events
   app.get('/api/events', (req, res) => {
     res.send({
       events: [
@@ -11,6 +12,7 @@ export default app => {
     })
   })
 
+  // add a new event
   app.post('/api/event', (req, res) => {
     res.send(
       `I received your POST request. This is what you sent me: ${JSON.stringify(
